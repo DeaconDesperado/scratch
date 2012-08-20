@@ -1,0 +1,113 @@
+@import "presets.less";
+
+html {height: 100%;}
+
+body {
+	background: #444 url('../../images/fabric-tile.png') center center;
+}
+
+#header {
+	background: rgba(0,0,0,0.25);
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+#quilt {
+	height: 400px;
+	left: 50%; margin-left: -200px;
+	position: absolute;
+	top: 50%; margin-top: -200px;
+	width: 400px;
+}
+
+
+
+
+
+.patch {
+	background: #111;
+	.corner(2px);
+	cursor: pointer;
+	height: 400px;
+	overflow: hidden;
+	position: absolute;
+	width: 400px;
+	z-index: 1;
+
+	ul.menu {
+		display: none;
+		position: absolute; bottom: 10px; right: 10px;
+	}
+
+	&:hover {
+		ul.menu {display: block;}
+	}
+}
+
+#master {
+	background: #000;
+	font: 16px/20px 'Bitstream Charter';
+	overflow: visible;
+	text-align: center;
+	top: 0; left: 0;
+
+	ul.menu {display: block;}
+}
+
+.unlocked {
+	background: #2a2a2a;
+
+	&:hover {background: #333;}
+}
+
+
+
+
+
+#minimap {
+	background: rgba(0,0,0,0.5);
+	border: 1px solid teal;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	.corner(2px);
+	height: 180px;
+	padding: 10px;
+	position: fixed; bottom: 20px; left: 20px;
+	width: 180px;
+}
+
+
+
+
+
+
+ul.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		float: left;
+		display: inline-block;
+		margin: 3px;
+		padding: 0;
+	}
+
+	a {
+		background: #eee;
+		border: 1px solid #888; border-color: #ddd #bbb #888; border-bottom-width: 2px;
+		box-shadow: inset 0 -5px 12px #ccc;
+		color: #555;
+		.corner(3px);
+		font: bold 13px/16px mono, @arial;
+		float: left;
+		padding: 6px 10px;
+		text-decoration: none;
+		text-shadow: 1px 1px 0 #fff;
+
+		&:hover {background: #fff;}
+		&:active, &:focus {border-width: 2px 1px 1px;}
+	}
+}
