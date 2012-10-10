@@ -1,0 +1,19 @@
+{% extends "root_resp.html" %}
+{% block content %}
+
+	<div id="vidPane">
+		<p>Flash player must be enabled</p>
+	</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script type="text/javascript">
+	
+	function onYouTubePlayerReady(){
+		console.log('foo')
+	}
+
+	swfobject.embedSWF("http://www.youtube.com/v/ACs2DU3fV80?version=3&enablejsapi=1", "vidPane", "300", "300", "10.0.0");
+
+</script>
+{% endblock %}
