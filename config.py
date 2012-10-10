@@ -23,7 +23,7 @@ class TestingConfig(Config):
     TESTING = True
     MONGO_URI = ''
     MONGO_DB = ''
-    SERVER_NAME = ''
+    SERVER_NAME = 'localhost:5050'
 
 
 class UnitTestingConfig(TestingConfig):

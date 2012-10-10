@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, abort, redirect, request, g, sessi
 import json
 from werkzeug.wrappers import Request,Response
 from functools import wraps
-from twython import Twython
 from pymongo.errors import DuplicateKeyError
 from passlib.hash import sha256_crypt
 
