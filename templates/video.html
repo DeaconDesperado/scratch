@@ -9,11 +9,20 @@
 <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 <script type="text/javascript">
 	
-	function onYouTubePlayerReady(){
-		console.log('foo')
-	}
+	var params = { allowScriptAccess: "always" };
+    	var atts = { id: "myytplayer" };
 
-	swfobject.embedSWF("http://www.youtube.com/v/ACs2DU3fV80?version=3&enablejsapi=1", "vidPane", "300", "300", "10.0.0");
+	
+	swfobject.embedSWF("http://www.youtube.com/v/ACs2DU3fV80?enablejsapi=1&playerapiid=ytplayer&version=3",
+                       "vidPane", "425", "356", "8", null, null, params, atts);
+
+
+	function onYouTubePlayerReady(playerId) {
+		ytplayer = document.getElementById("myytplayer");
+		console.log(ytplayer)
+    	}
+	
+	
 
 </script>
 {% endblock %}
